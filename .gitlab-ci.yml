@@ -12,6 +12,7 @@ variables:
   CONTAINER_RELEASE_IMAGE: registry.gitlab.com/$CI_PROJECT_PATH:latest
 
 before_script:
+  - sed -i 's#FROM oott123/#FROM registry.gitlab.com/oott123/docker-#' Dockerfile
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
 
 build-image:

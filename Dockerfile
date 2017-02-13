@@ -13,8 +13,9 @@ RUN apt-get update && \
     apt-get install -y --install-recommends winehq-devel && \
     wget -O /usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks && \
     chmod 755 /usr/local/bin/winetricks && \
-    apt-get clean && \
-    sudo -Hu user /usr/local/bin/winetricks winhttp && \
+    apt-get clean
+
+RUN sudo -Hu user /usr/local/bin/winetricks winhttp && \
     sudo -Hu user /usr/local/bin/winetricks msscript && \
     sudo -Hu user /usr/local/bin/winetricks cjkfonts && \
     mkdir /home/user/coolq
@@ -25,5 +26,6 @@ ENV LANG=zh_CN.UTF-8 \
 
 COPY vncmain.sh /app/vncmain.sh
 COPY cq /usr/local/bin/cq
+COPY cont-init.d /etc/cont-init.d/
 
 VOLUME ["/home/user/coolq"]
