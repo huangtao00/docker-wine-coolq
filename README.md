@@ -1,6 +1,6 @@
 # docker-wine-coolq
 
-docker-wine-coolq 可以使你通过 WinE 在 Docker 容器中运行 酷 Q Air 或 酷 Q Pro。
+docker-wine-coolq 可以使你通过 Wine 在 Docker 容器中运行 酷 Q Air 或 酷 Q Pro。
 
 即使该 dockerfile 仓库使用 GPL 发布，其中下载的软件仍然遵循其最终用户使用许可协议，请确认同意协议后再进行下载使用。
 
