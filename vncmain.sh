@@ -8,7 +8,7 @@ export TERM=linux
 while true; do
     # 检查进程是否存在
     process=`ps aux | grep 'CQ.\.exe'`
-    if [ -z $process ]; then
+    if [ "$process" == '' ]; then
         # 不存在则重启
         wine ~/coolq/CQ?.exe /account $COOLQ_ACCOUNT
         # 进程退出后等待 30 秒后再检查，避免 CQ 自重启导致误判
