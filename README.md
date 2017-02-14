@@ -10,7 +10,7 @@ docker-wine-coolq 可以使你通过 Wine 在 Docker 容器中运行 酷 Q Air �
 
 ```bash
 docker pull coolq/wine-coolq
-docker run -P coolq/wine-coolq
+docker run -p 9000:9000 coolq/wine-coolq
 ```
 
 即可运行一个 wine-coolq 实例。运行后，访问 `http://你的IP:9000` 可以打开一个 VNC 页面，输入 `MAX8chars` 作为密码后即可看到一个酷 Q Air 已经启动。
